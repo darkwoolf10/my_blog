@@ -5,8 +5,10 @@
  */
 
 require('./bootstrap');
+import VueRouter from 'vue-router'
 
 window.Vue = require('vue');
+Vue.use(VueRouter)
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +23,26 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+import App from './views/App'
+import Hello from './views/Hello'
+import Home from './views/Home'
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/hello',
+            name: 'hello',
+            component: Hello,
+        },
+    ],
+});
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -29,4 +51,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components: { App },
+    router,
 });
