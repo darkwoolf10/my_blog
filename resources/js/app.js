@@ -6,9 +6,14 @@
 
 require('./bootstrap');
 import VueRouter from 'vue-router'
+import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+
 
 window.Vue = require('vue');
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+Vue.use(VueMaterial);
 
 /**
  * The following block of code may be used to automatically register your
@@ -22,6 +27,7 @@ Vue.use(VueRouter)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('post', require('./components/Post.vue').default);
 
 import App from './views/App'
 import Hello from './views/Hello'

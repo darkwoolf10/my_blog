@@ -1,5 +1,7 @@
 <template>
-    <p>This is the homepage</p>
+    <div class="posts">
+        <post></post>
+    </div>
 </template>
 
 <script>
@@ -8,6 +10,17 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .md-card {
+        margin-top: 20px;
+        width: 500px;
+        display: inline-block;
+        vertical-align: top;
+    }
 
+    .posts {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
 </style>

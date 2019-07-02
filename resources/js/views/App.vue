@@ -1,15 +1,19 @@
 <template>
-    <div>
-        <h1>Darkwoolf blog</h1>
+    <div class="page-container">
+        <md-app>
+            <md-app-toolbar class="md-primary">
+                <router-link :to="{ name: 'home' }">
+                    <md-button>Darkwoolf blog</md-button>
+                </router-link>
+                <router-link :to="{ name: 'hello' }">
+                    <md-button>Hello</md-button>
+                </router-link>
 
-        <p>
-            <router-link :to="{ name: 'home' }">Home</router-link> |
-            <router-link :to="{ name: 'hello' }">Hello World</router-link>
-        </p>
-
-        <div class="container">
-            <router-view></router-view>
-        </div>
+            </md-app-toolbar>
+            <md-app-content class="posts">
+                <router-view></router-view>
+            </md-app-content>
+        </md-app>
     </div>
 </template>
 
@@ -19,6 +23,5 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>
