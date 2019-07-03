@@ -1,6 +1,13 @@
 <template>
     <div class="posts">
         <post></post>
+        <post></post>
+        <post></post>
+        <post></post>
+        <post></post>
+        <post></post>
+        <post></post>
+        <post></post>
     </div>
 </template>
 
@@ -16,6 +23,7 @@
         width: 500px;
         display: inline-block;
         vertical-align: top;
+        background-color: white;
     }
 
     .posts {
