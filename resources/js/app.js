@@ -30,7 +30,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('post', require('./components/Post.vue').default);
 
 import App from './views/App'
-import Hello from './views/Hello'
+import About from './views/About'
 import Home from './views/Home'
 
 const router = new VueRouter({
@@ -42,9 +42,9 @@ const router = new VueRouter({
             component: Home
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: Hello,
+            path: '/about',
+            name: 'about',
+            component: About,
         },
     ],
 });

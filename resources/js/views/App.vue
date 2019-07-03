@@ -5,8 +5,8 @@
                 <router-link :to="{ name: 'home' }">
                     <md-button>Darkwoolf blog</md-button>
                 </router-link>
-                <router-link :to="{ name: 'hello' }">
-                    <md-button>Hello</md-button>
+                <router-link :to="{ name: 'about' }">
+                    <md-button>About</md-button>
                 </router-link>
 
             </md-app-toolbar>
